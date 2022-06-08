@@ -1,0 +1,312 @@
+<section class="comments">
+    <h2 class="title title_b">Add a Comment</h2>
+    <form action="" method="post" class="add-comment" name="addCommentForm" id="addCommentForm">
+        <div class="user-info">
+            <div class="user-info__item required">
+                <label for="userName" class="add-comment__label">Name</label>
+                <input id="userName" type="text" class="add-comment__input add-comment__input_s" placeholder="Shane Hobbins" name="userName">
+                <div class="error-message"></div>
+            </div>
+            <div class="user-info__item required">
+                <label for="userMail" class="add-comment__label">Email</label>
+                <input id="userMail" type="email" class="add-comment__input add-comment__input_s" placeholder="info@interface.com" name="userEmail">
+                <div class="error-message"></div>
+            </div>
+            <div class="user-info__item">
+                <label for="userUrl" class="add-comment__label">Website</label>
+                <input id="userUrl" type="text" class="add-comment__input add-comment__input_s" placeholder="www.interface.com" name="userWebsite">
+                <div class="error-message"></div>
+            </div>
+        </div>
+        <div class="save">
+            <input id="saveUser" type="checkbox" class="add-comment__checkbox" name="saveUserInfo">
+            <label for="saveUser" class="checkbox save__checkbox">
+                <div class="checkbox__circle"></div>
+            </label>
+            <div class="add-comment__checkbox-label">Save my name, email, and website in this browser for the next time I comment</div>
+        </div>
+        <div class="message-wrap required">
+            <div class="label-wrap">
+                <label for="message" class="add-comment__label">Message</label>
+                <ul class="smile-list">
+                    <li class="smile-list__item">
+                        <svg class="smile-list__img smile-list__img_1" id="smileGrin">
+                            <use xlink:href="#smile-1" />
+                        </svg>
+                    </li>
+                    <li class="smile-list__item">
+                        <svg class="smile-list__img smile-list__img_2" id="smileWink">
+                            <use xlink:href="#smile-2" />
+                        </svg>
+                    </li>
+                    <li class="smile-list__item">
+                        <svg class="smile-list__img smile-list__img_3" id="smileHappy">
+                            <use xlink:href="#smile-3" />
+                        </svg>
+                    </li>
+                    <li class="smile-list__item">
+                        <svg class="smile-list__img smile-list__img_4" id="smileVictory">
+                            <use xlink:href="#smile-4" />
+                        </svg>
+                    </li>
+                    <li class="smile-list__item">
+                        <svg class="smile-list__img smile-list__img_5" id="smilePerplexed">
+                            <use xlink:href="#smile-5" />
+                        </svg>
+                    </li>
+                    <li class="smile-list__item">
+                        <svg class="smile-list__img smile-list__img_6" id="smileAngry">
+                            <use xlink:href="#smile-6" />
+                        </svg>
+                    </li>
+                    <li class="smile-list__item">
+                        <svg class="smile-list__img smile-list__img_7" id="smileSad">
+                            <use xlink:href="#smile-7" />
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+            <textarea name="userMessage" id="message" class="add-comment__input add-comment__input_textarea" placeholder="Hi there [::smile::] lorem [b]ipsum[/b] [i]dolor[/i]"></textarea>
+            <div class="error-message"></div>
+        </div>
+        <div class="button-wrap">
+            <button class="btn btn_light" id="resetBtn">Cancel</button>
+            <button class="btn btn_regular" id="postBtn"  type="submit" form="addCommentForm" value="submit">Post</button>
+        </div>
+        
+    </form>
+</section>
+    
+<section class="comments">
+    <h2 class="title title_b">Comments</h2>
+    <ul class="comment-list" id="commentList">
+        <!--<li class="comment">
+            <div class="comment__head">
+                <div class="comment-ava">
+                    <div class="comment-ava__img-wrap">
+                        <img class="comment-ava__img" src="../images/user-1.jpg" alt="">
+                    </div>
+                    <div class="comment-ava__website">
+                        <a class="comment-ava__link" href="#">Website</a>
+                    </div>
+                </div>
+                <div class="comment-title">
+                    <div class="comment-title__name">Jon Davis</div>
+                    <div class="comment-title__date">2 Minutes ago</div>
+                </div>
+                <div class="comment-icons">
+                    <div class="change">
+                        <svg class="change__img change__img_edit">
+                            <use xlink:href="#edit" />
+                        </svg>
+                        <svg class="change__img change__img_delete">
+                            <use xlink:href="#delete" />
+                        </svg>
+                    </div>
+                    <div class="likes">
+                        <div class="likes__wrap">
+                            <svg class="likes__img likes__img_inner">
+                                <use xlink:href="#innerHeart" />
+                            </svg>
+                            <svg class="likes__img">
+                                <use xlink:href="#heart" />
+                            </svg>
+                        </div>
+                        <div class="likes__counter">10</div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment__body">
+                <p class="comment__txt">Lorem  ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+            </div>
+            <div class="comment__foot">
+                <div class="reply">
+                    <svg class="reply__img">
+                        <use xlink:href="#reply" />
+                    </svg>
+                    <div class="reply__txt">Reply</div>
+                </div>
+                <div class="helpful">
+                    <div class="helpful__item helpful__item_up">
+                        <div class="helpful__counter helpful__counter_up">5</div>
+                        <svg class="helpful__img helpful__img_up">
+                            <use xlink:href="#like" />
+                        </svg>
+                    </div>
+                    <div class="helpful__item helpful__item_down">
+                        <svg class="helpful__img helpful__img_down">
+                            <use xlink:href="#dislike" />
+                        </svg>
+                        <div class="helpful__counter helpful__counter_down">2</div>
+                    </div>
+                </div>
+            </div>
+            <ul class="replies">
+                <li class="comment">
+                    <div class="comment__head">
+                        <div class="comment-ava">
+                            <div class="comment-ava__img-wrap">
+                                <img class="comment-ava__img" src="../images/user-2.jpg" alt="">
+                            </div>
+                            <div class="comment-ava__website">
+                                <a class="comment-ava__link" href="#">Website</a>
+                            </div>
+                        </div>
+                        <div class="comment-title">
+                            <div class="comment-title__name">Shane Hobbins</div>
+                            <div class="comment-title__date">Just now</div>
+                        </div>
+                        <div class="comment-icons">
+                            <div class="change">
+                                <svg class="change__img change__img_edit">
+                                    <use xlink:href="#edit" />
+                                </svg>
+                                <svg class="change__img change__img_delete">
+                                    <use xlink:href="#delete" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment__body">
+                        <p class="comment__txt"><span class="comment__starter">Jon Davis</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                    </div>
+                    <div class="comment__foot">
+                        <div class="reply">
+                            <svg class="reply__img">
+                                <use xlink:href="#reply" />
+                            </svg>
+                            <div class="reply__txt">Reply</div>
+                        </div>
+                        <div class="helpful">
+                            <div class="helpful__item helpful__item_up">
+                                <div class="helpful__counter helpful__counter_up">5</div>
+                                <svg class="helpful__img helpful__img_up">
+                                    <use xlink:href="#like" />
+                                </svg>
+                            </div>
+                            <div class="helpful__item helpful__item_down">
+                                <svg class="helpful__img helpful__img_down">
+                                    <use xlink:href="#dislike" />
+                                </svg>
+                                <div class="helpful__counter helpful__counter_down">2</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="comment">
+                    <div class="comment__head">
+                        <div class="comment-ava">
+                            <div class="comment-ava__img-wrap">
+                                <img class="comment-ava__img" src="../images/user-1.jpg" alt="">
+                            </div>
+                            <div class="comment-ava__website">
+                                <a class="comment-ava__link" href="#">Website</a>
+                            </div>
+                        </div>
+                        <div class="comment-title">
+                            <div class="comment-title__name">Jon Davis</div>
+                            <div class="comment-title__date">Just now</div>
+                        </div>
+                        <div class="comment-icons">
+                            <div class="change">
+                                <svg class="change__img change__img_edit">
+                                    <use xlink:href="#edit" />
+                                </svg>
+                                <svg class="change__img change__img_delete">
+                                    <use xlink:href="#delete" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment__body">
+                        <p class="comment__txt"><span class="comment__starter">Shane Hobbins</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                    </div>
+                    <div class="comment__foot">
+                        <div class="reply">
+                            <svg class="reply__img">
+                                <use xlink:href="#reply" />
+                            </svg>
+                            <div class="reply__txt">Reply</div>
+                        </div>
+                        <div class="helpful">
+                            <div class="helpful__item helpful__item_up">
+                                <div class="helpful__counter helpful__counter_up">5</div>
+                                <svg class="helpful__img helpful__img_up">
+                                    <use xlink:href="#like" />
+                                </svg>
+                            </div>
+                            <div class="helpful__item helpful__item_down">
+                                <svg class="helpful__img helpful__img_down">
+                                    <use xlink:href="#dislike" />
+                                </svg>
+                                <div class="helpful__counter helpful__counter_down">2</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="comment">
+            <div class="comment__head">
+                <div class="comment-ava">
+                    <div class="comment-ava__img-wrap">
+                        <img class="comment-ava__img" src="../images/user-1.jpg" alt="">
+                    </div>
+                    <div class="comment-ava__website">
+                        <a class="comment-ava__link" href="#">Website</a>
+                    </div>
+                </div>
+                <div class="comment-title">
+                    <div class="comment-title__name">Jon Davis</div>
+                    <div class="comment-title__date">2 Minutes ago</div>
+                </div>
+                <div class="comment-icons">
+                    <div class="change">
+                        <svg class="change__img change__img_edit">
+                            <use xlink:href="#edit" />
+                        </svg>
+                        <svg class="change__img change__img_delete">
+                            <use xlink:href="#delete" />
+                        </svg>
+                    </div>
+                    <div class="likes">
+                        <div class="likes__wrap">
+                            <svg class="likes__img likes__img_inner">
+                                <use xlink:href="#innerHeart" />
+                            </svg>
+                            <svg class="likes__img">
+                                <use xlink:href="#heart" />
+                            </svg>
+                        </div>
+                        <div class="likes__counter">10</div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment__body">
+                <p class="comment__txt">Lorem  ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+            </div>
+            <div class="comment__foot">
+                <div class="reply">
+                    <svg class="reply__img">
+                        <use xlink:href="#reply" />
+                    </svg>
+                    <div class="reply__txt">Reply</div>
+                </div>
+                <div class="helpful">
+                    <div class="helpful__item helpful__item_up">
+                        <div class="helpful__counter helpful__counter_up">5</div>
+                        <svg class="helpful__img helpful__img_up">
+                            <use xlink:href="#like" />
+                        </svg>
+                    </div>
+                    <div class="helpful__item helpful__item_down">
+                        <svg class="helpful__img helpful__img_down">
+                            <use xlink:href="#dislike" />
+                        </svg>
+                        <div class="helpful__counter helpful__counter_down">2</div>
+                    </div>
+                </div>
+            </div>
+        </li>-->
+    </ul>
+</section>
